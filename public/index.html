@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google-site-verification" content="mN6z9PefeawgNBjcEWGRLDQYtosEdcI07N4uJU-tX4Q" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>feelingsobread</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900|Maven+Pro:900|Montserrat|Titillium+Web:700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="topnav">
+        <div id="menu"><img src="menu.png" alt="menu" width="40px"></div>
+        <!-- <div lang="ko">한국</div> -->
+        <p id="fsb">F E E L I N G S O B R E A D</p>
+        <div id="yt"><a href="https://www.youtube.com/channel/UCgiPI_iyAbO6IkIBbHa27tA?view_as=subscriber" target="_blank"><img src="yt.png" alt="youtube" width="40px"></a></div>
+    </div>
+
+    <div class="content">
+      <div class="inner">
+        <h3>Sheet Music</h3>
+        <p><a href="/Sheets/Apink-Five.pdf" target="_blank">Apink - Five</a></p>
+        <p><a href="/Sheets/Dreamcatcher-Lullaby.pdf" target="_blank">Dreamcatcher - Lullaby</a></p>
+        <p><a href="/Sheets/FTIsland-Wind.pdf" target="_blank">FT Island - Wind</a></p>
+        <p><a href="/Sheets/GD-Divina.pdf" target="_blank">G-Dragon - Divina Commedia</a></p>
+        <p><a href="/Sheets/Heize-Don'tKnowYou.pdf" target="_blank">Heize - Don't Know You</a></p>
+        <p><a href="/Sheets/HuhGak-Sick.pdf" target="_blank">Huh Gak - Sick</a></p>
+        <p><a href="/Sheets/Hyorin-Fruity.pdf" target="_blank">Hyorin - Fruity</a></p>
+        <p><a href="/Sheets/Jinsoul-Singing.pdf" target="_blank">LOONA(Jinsoul) - Singing in the Rain</a></p>
+        <p><a href="/Sheets/Lay-GoodbyeChristmas.pdf" target="_blank">Lay - Goodbye Christmas</a></p>
+        <p><a href="/Sheets/Lay-GoodbyeChristmas(Eng).pdf" target="_blank">Lay - Goodbye Christmas (Eng)</a></p>
+        <p><a href="/Sheets/MoonMoon-Contrail.pdf" target="_blank">MoonMoon - Contrail</a></p>
+        <p><a href="/Sheets/Stellar-Archangels.pdf" target="_blank">Stellar - Archangels of the Sephiroth</a></p>
+        <p><a href="/Sheets/Taemin-FlameOfLove.pdf" target="_blank">Taemin - Flame Of Love</a></p>
+        <p><a href="/Sheets/Tara-What'sMyName.pdf" target="_blank">T-ARA - What's My Name</a></p>
+      </div>
+    </div>
+
+    <!-- <div id="message"> -->
+      <!-- <h2>Welcome</h2> -->
+      <!-- <h1>Firebase Hosting Setup Complete</h1> -->
+      <!-- <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p> -->
+      <!-- <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a> -->
+    <!-- </div> -->
+    <!-- <p id="load">Firebase SDK Loading&hellip;</p> -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
