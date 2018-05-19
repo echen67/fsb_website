@@ -1,6 +1,6 @@
 body {
-  background: #eeeeee;
-  /*background: #ffd6d6;*/
+  /*background: #eeeeee;*/
+  background: #ffd6d6;
   /*color: rgba(0,0,0,0.87);*/
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
@@ -107,7 +107,7 @@ h3 {
   position: absolute;
   top: 60px;
   bottom: 0px;
-  /*height: 100%;*/
+  height: auto;
   width: 200px;
   padding: 20px 0px;
   background-color: white;
@@ -141,13 +141,13 @@ h3 {
 .content {
   position: absolute;
   top: 60px;
-  bottom: 0px;
-  /*height: 100%;*/
+  height: auto;
+  /*right: 0px;*/
   width: 100%;
-  /*background-color: #cccccc;*/
   background-color: #ffd6d6;
   z-index: -1;
   /*margin-left: 200px;*/
+  /*left: 200px;*/
   /*display: none;*/
 }
 
@@ -170,6 +170,16 @@ h3 {
   color: gray;
 }
 
+@media screen and (max-width: 1000px) {
+  #sidenav {
+    width: 100%;
+    bottom: auto;
+  }
+  .content {
+    /*position: relative;*/
+    top: 300px;
+  }
+}
 
 #message {
   background: white;
