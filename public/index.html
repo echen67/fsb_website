@@ -18,14 +18,15 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Heebo:900|Maven+Pro:900|Montserrat|Titillium+Web:700" rel="stylesheet">
   </head>
   <body>
     <div class="topnav">
-        <div id="menu" onclick="openSide()"><img src="menu.png" alt="menu" width="40px"></div>
+        <div id="menu"><img src="menu.png" alt="menu" width="40px"></div>
         <p id="fsb">FEELINGSOBREAD</p>
-        <!-- <div id="kor">한국</div> -->
         <div id="yt"><a href="https://www.youtube.com/channel/UCgiPI_iyAbO6IkIBbHa27tA?view_as=subscriber" target="_blank"><img src="yt.png" alt="youtube" width="40px"></a></div>
     </div>
 
@@ -40,6 +41,7 @@
       <div class="inner">
         <h3>Sheet Music</h3>
         <p><a href="/Sheets/Apink-Five.pdf" target="_blank">Apink - Five</a></p>
+        <p><a href="/Sheets/Dreamcatcher_-_Emotion.pdf" target="_blank">Dreamcatcher - Emotion</a></p>
         <p><a href="/Sheets/Dreamcatcher-Lullaby.pdf" target="_blank">Dreamcatcher - Lullaby</a></p>
         <p><a href="/Sheets/Dreamcatcher_-_You_and_I.pdf" target="_blank">Dreamcatcher - You And I</a></p>
         <p><a href="/Sheets/FTIsland-Wind.pdf" target="_blank">FT Island - Wind</a></p>
@@ -56,6 +58,15 @@
         <p><a href="/Sheets/Tara-What'sMyName.pdf" target="_blank">T-ARA - What's My Name</a></p>
       </div>
     </div>
+
+    <script>
+    // $(document).ready(function(){
+    //   $("#menu").click(function(){
+    //     $("#sidenav").slideToggle("slow");
+    //     console.log("test");
+    //   });
+    // });
+    </script>
 
     <!-- <div id="message"> -->
       <!-- <h2>Welcome</h2> -->
@@ -82,8 +93,8 @@
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
           document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
         } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+          //console.error(e);
+          //document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
         }
       });
     </script>

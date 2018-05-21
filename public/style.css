@@ -111,6 +111,7 @@ h3 {
   width: 200px;
   padding: 20px 0px;
   background-color: white;
+  /*display: none;*/
 }
 
 #sidenav p {
