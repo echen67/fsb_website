@@ -17,10 +17,15 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding-left: 0;
+}
+
 h3 {
-  margin: 0px 0px 7px 0px;
+  margin: 0px 0px 0px 0px;
   font-family: 'Montserrat', sans-serif;
   font-weight: black;
+  font-size: 24px;
 }
 
 .topnav {
@@ -64,7 +69,7 @@ h3 {
   position: absolute;
   float: right;
   display: block;
-  top: 20px;
+  top: 15px;
   right: 20px;
   margin: 0px;
   padding: 0px;
@@ -76,6 +81,18 @@ h3 {
   opacity: 0.6;
 }
 
+#insta {
+  position: absolute;
+  float: right;
+  display: block;
+  top: 10px;
+  right: 80px;
+}
+
+#insta:hover {
+  opacity: 0.6;
+}
+
 #fsb {
   /*font-family: 'Maven Pro', sans-serif;*/
   /*font-family: 'Titillium Web', sans-serif;*/
@@ -84,13 +101,27 @@ h3 {
   display: block;
   font-family: 'Heebo', sans-serif;
   font-weight: 900;
+  /*width: 200px;*/
   text-align: center;
   letter-spacing: 7px;
-  padding: 0;
+  /*padding: 0px 0px 0px 20px;*/
   margin: 0;
   /*cursor: pointer;*/
   /*border-top: 0px;*/
   /*border-left: 50%;*/
+}
+
+#searchBar {
+  background-image: url('search.png');
+  /*Search by Landan Lloyd from the Noun Project*/
+  background-position: 0px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  padding: 6px 20px 6px 40px;
+  width: 25%;
+  border: 1px solid #ddd;
+  margin: 10px 0px 0px 0px;
 }
 
 #dim {
@@ -104,7 +135,7 @@ h3 {
 }
 
 #sidenav {
-  position: absolute;
+  position: fixed;
   top: 60px;
   bottom: 0px;
   height: auto;
@@ -139,9 +170,23 @@ h3 {
   color: gray;
 }
 
+#bottombar {
+  /*overflow: hidden;*/
+  position: absolute;
+  background-color: #999;
+  height: 75px;
+  width: 100%;
+  margin-top: 40px;
+  /*bottom: 0px;*/
+  /*position: fixed;*/
+  /*top: 0px;*/
+  /*box-shadow: 0px 1px #cccccc;*/
+  z-index: 2;
+}
+
 .content {
   position: absolute;
-  top: 60px;
+  top: 50px;
   height: auto;
   /*right: 0px;*/
   width: 100%;
@@ -156,7 +201,7 @@ h3 {
   margin: 50px auto;
   padding: 30px 50px;
   width: 50%;
-  background-color: #FFFFFF;
+  background-color: #FFF;
 }
 
 .inner a {
@@ -175,6 +220,7 @@ h3 {
   #sidenav {
     width: 100%;
     bottom: auto;
+    position: absolute;
   }
   .content {
     /*position: relative;*/
