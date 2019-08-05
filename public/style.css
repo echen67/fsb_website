@@ -2,13 +2,17 @@ body {
   /*background: #eeeeee;*/
   background: #ffd6d6;
   /*color: rgba(0,0,0,0.87);*/
-  font-family: Helvetica, Arial, sans-serif;
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+  /*line-height: 50pt;*/
   margin: 0;
   padding: 0;
 }
 
 p {
   margin: 10px 0px;
+  /*line-height: 100pt;*/
+  /*font-family: 'Montserrat', sans-serif;*/
   /*width: 100px;*/
   /*cursor: pointer;*/
 }
@@ -172,16 +176,16 @@ h3 {
 
 #bottombar {
   /*overflow: hidden;*/
-  position: absolute;
-  background-color: #999;
+  position: relative;
+  background-color: #777;
   height: 75px;
   width: 100%;
-  margin-top: 40px;
-  /*bottom: 0px;*/
-  /*position: fixed;*/
-  /*top: 0px;*/
-  /*box-shadow: 0px 1px #cccccc;*/
-  z-index: 2;
+  padding: 10px 0px 0px 10px;
+  display: none;
+}
+
+#bottombar p {
+  color: white;
 }
 
 .content {
@@ -192,6 +196,7 @@ h3 {
   width: 100%;
   background-color: #ffd6d6;
   z-index: -1;
+  /*padding-bottom: 75px;*/
   /*margin-left: 200px;*/
   /*left: 200px;*/
   /*display: none;*/
@@ -202,6 +207,15 @@ h3 {
   padding: 30px 50px;
   width: 50%;
   background-color: #FFF;
+}
+
+#aboutme {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0px;
+  padding-top: 0px;
+  line-height: 30pt;
 }
 
 .inner a {
@@ -221,13 +235,21 @@ h3 {
     width: 100%;
     bottom: auto;
     position: absolute;
+    padding: 0px;
   }
   .content {
     /*position: relative;*/
-    top: 300px;
+    top: 240px;
+  }
+  #topicons {
+    display:none;
+  }
+  #bottombar {
+    display: block;
   }
 }
 
+/*---BELOW IS JUST FIREBASE STUFF INCLUDED BY DEFAULT---*/
 #message {
   background: white;
   max-width: 360px;

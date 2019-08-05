@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="google-site-verification" content="mN6z9PefeawgNBjcEWGRLDQYtosEdcI07N4uJU-tX4Q" />
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>feelingsobread</title>
+    	<link rel="shortcut icon" href="/Images/favicon.png" />
+    	<link rel="apple-touch-icon" href="/Images/favicon.png" />
+
+    	<!-- update the version number as needed -->
+    	<script defer src="/__/firebase/5.0.2/firebase-app.js"></script>
+    	<!-- include only the Firebase features as you need -->
+    	<script defer src="/__/firebase/5.0.2/firebase-auth.js"></script>
+    	<script defer src="/__/firebase/5.0.2/firebase-database.js"></script>
+   	 	<script defer src="/__/firebase/5.0.2/firebase-messaging.js"></script>
+    	<script defer src="/__/firebase/5.0.2/firebase-storage.js"></script>
+    	<!-- initialize the SDK after all desired features are loaded -->
+    	<script defer src="/__/firebase/init.js"></script>
+
+    	<script src="https://ajax.googleapis.com/ajax/libs/	jquery/3.3.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Heebo:900|Maven+Pro:900|Montserrat|Titillium+Web:700" rel="stylesheet">
+	</head>
+	<body>
+		<div class="topnav">
+        <!-- <div id="menu"><img src="menu.png" alt="menu" width="40px"></div> -->
+        <p id="fsb">FEELINGSOBREAD</p>
+        <div id="yt"><a href="https://www.youtube.com/channel/UCgiPI_iyAbO6IkIBbHa27tA?view_as=subscriber" target="_blank"><img src="/Images/yt_icon_rgb.png" alt="youtube" width="40px"></a></div>
+        <div id="insta"><a href="https://www.instagram.com/feelingsobread/?hl=en" target="_blank"><img src="/Images/instagram.png" alt="instagram" width="40px"></a></div>
+    	</div>
+
+    	<div id="sidenav">
+        	<p><a href="index.html">SHEET MUSIC</a></p>
+        	<p>ABOUT ME</p>
+        	<p><a href="indexkor.html">한국</a></p>
+    	</div>
+
+    	<div class="content">
+      		<div class="inner">
+      			<h3>About Me</h3>
+      			<p id="aboutme">Hi! I do piano covers for Kpop songs on YouTube and provide the sheet music here for free. Please be sure to check out my channel! If you have any requests, just comment on one of my videos or message me directly on YouTube.
+
+      			Thanks for reading! :)</p>
+      		</div>
+    	</div>
+
+    	<script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          //console.error(e);
+          //document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+	</body>
+</html>
