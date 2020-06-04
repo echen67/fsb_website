@@ -89,8 +89,8 @@ h3 {
   position: absolute;
   float: right;
   display: block;
-  top: 10px;
-  right: 80px;
+  top: 15px;
+  right: 75px;
 }
 
 #insta:hover {
@@ -177,15 +177,16 @@ h3 {
 #bottombar {
   /*overflow: hidden;*/
   position: relative;
-  background-color: #777;
+  background-color: #FFF;
   height: 75px;
   width: 100%;
   padding: 10px 0px 0px 10px;
+  box-shadow: 0px -1px #CCC;
   display: none;
 }
 
 #bottombar p {
-  color: white;
+  color: black;
 }
 
 .content {
